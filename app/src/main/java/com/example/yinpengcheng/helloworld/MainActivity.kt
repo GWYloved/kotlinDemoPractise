@@ -1,5 +1,7 @@
 package com.example.yinpengcheng.helloworld
 
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         var list = listOf("1","2","3")
         var adapter = ListAdapter(this, list)
         listview.adapter = adapter
+        var packageManager  = getPackageManager()
+        var activityInfo = packageManager.getActivityInfo(componentName, PackageManager.GET_ACTIVITIES)
 
     }
 }
