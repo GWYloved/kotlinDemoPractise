@@ -1,5 +1,6 @@
 package com.example.yinpengcheng.motioneventdemo
 
+import android.graphics.Canvas
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                     Log.d(tag,"ACTION_CANCEL")
                     event.actionIndex
                 }
+
                 MotionEvent.ACTION_OUTSIDE -> Log.d(tag,"ACTION_OUTSIDE")
                 MotionEvent.ACTION_POINTER_UP -> Log.d(tag,"ACTION_POINTER_UP")
                 MotionEvent.ACTION_POINTER_DOWN ->Log.d(tag,"ACTION_POINTER_DOWN")
